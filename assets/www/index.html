@@ -1,0 +1,155 @@
+<html>
+<head>
+<meta name="viewport" content="target-densitydpi=high-dpi, user-scalable=no">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="config/config.js"></script>
+
+<script type="text/javascript" src="jquery-json.js"></script>
+<script type="text/javascript" src="jquery.mousehold.js"></script>
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="serverView.js"></script>
+<style>
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#main .row {
+	height: 70px;
+}
+#main .row-image {
+	float: left;
+	padding: 10px 0px 10px 10px;
+	height: 44px;
+	width: 49px;
+}
+#main .row-name {
+	padding: 20px;
+	font-size: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#details .row {
+    height: 70px;
+}
+#details .row-image {
+    float: left;
+    padding: 10px 0px 10px 10px;
+    height: 44px;
+    width: 49px;
+}
+#details .row-name {
+    padding: 8px 0 0 20px;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#details .row-number {
+    padding: 0 0 0 20px;
+    overflow: hidden;
+    font-size: 11px;
+}
+#details .row-datetime {
+    font-size: 12px;
+    overflow: hidden;
+    padding: 0 0 0 20px;
+}
+#details .row-datetime span {
+    padding: 0 0 0 5px;
+}
+#container {
+	padding: 10px 20px;
+}
+#title {
+	font-size: 20px;
+}
+#server-list {
+	margin-top: 20px;
+}
+.server-row {
+    background-color: #fff;
+    clear: both;
+   	height: 70px;
+   	margin-top: 5px;
+}
+#server-list .active {
+    background-color: #0C67D1;
+}
+input.remove {
+	float: right;
+    height: 30px;
+    margin: 20px 10px;
+    width: 30px;
+}
+.server-name {
+	float: left;
+    font-size: 25px;
+    padding: 20px 10px;
+}
+
+/* Setting page */
+#popup {
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+    top: 200;
+    left: 20;
+    right: 20;
+    position: absolute;
+    background-color: #424542;
+    border: 1px solid #bdbebd;
+}
+#popup .popup-button {
+    padding-top: 20px;
+} 
+#popup input.input-box {
+    color: #336699;
+    height: 90px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+#popup input.button {
+    height: 45px;
+    width: 100px;
+    font: Bold 15px Arial;
+}
+#popup-save {
+     float: left;
+}
+#popup-cancel {
+     float: right;
+}
+</style>
+</head>
+<body>
+<div id="content">
+    <div id="view-container">
+        <div id="main"></div>
+        <div id="details"></div>
+    </div>
+</div>
+
+<div id="settings" style="display:none;">
+    <div id="container">
+        <div id="title">Servers</div>
+        <div id="description">Please choose which server you want to view</div>
+        <div id="server-list">
+        </div>
+    </div>
+</div>
+
+
+<div id="popup" style="display:none;">
+    <div class="popup-title">New Server</div>
+    <input type="hidden" id="popup-id" class="input-box" value="" />
+    <input type="text" id="popup-name" class="input-box" value="Name" />
+    <input type="text" id="popup-url" class="input-box" value="URL" />
+    <div class="popup-button">
+        <input class="button" type="button" value="Save" id="popup-save" />
+        <input class="button" type="button" value="Cancel" id="popup-cancel" />
+    </div>
+</div>
+</body>
+</html>
+
