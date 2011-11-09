@@ -1,6 +1,5 @@
 package com.jenkins.android;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -9,7 +8,6 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jenkins.*;
 import com.phonegap.*;
