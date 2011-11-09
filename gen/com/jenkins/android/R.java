@@ -11,9 +11,9 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int btn_done=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int icon_add=0x7f020002;
+        public static final int ic_launcher=0x7f020000;
+        public static final int icon_add=0x7f020001;
+        public static final int icon_back=0x7f020002;
         public static final int icon_home_active=0x7f020003;
         public static final int icon_quit_active=0x7f020004;
         public static final int icon_refresh_active=0x7f020005;

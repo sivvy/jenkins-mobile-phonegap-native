@@ -58,7 +58,7 @@
             android:layout_width="40px"
             android:layout_height="40px"
             android:paddingTop="5px"
-            android:src="@drawable/btn_done"
+            android:src="@drawable/icon_back"
             android:clickable="true" />
           <ImageView
             android:id="@+id/add"

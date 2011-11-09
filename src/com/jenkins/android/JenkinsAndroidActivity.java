@@ -29,10 +29,8 @@ public class JenkinsAndroidActivity extends DroidGap {
         myWebView.setWebChromeClient(new WebChromeClient()); 
         myWebView.setWebViewClient(new WebViewClient()); 
         myWebView.getSettings().setJavaScriptEnabled(true);
-//        myWebView.getSettings().setDomStorageEnabled(true);
         View html = (View)super.appView.getParent();
         myWebView.addView(html);
-//        super.setIntegerProperty("loadUrlTimeoutValue", 60000);
         super.loadUrl("file:///android_asset/www/index.html");
         
         title = (TextView) findViewById(R.id.app_title);
@@ -50,45 +48,27 @@ public class JenkinsAndroidActivity extends DroidGap {
         
         home.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-	    		   Context context = getApplicationContext();
-	    		   Toast.makeText(context, "Home! ", Toast.LENGTH_SHORT).show();
 				sendJavascript("homeClickEvent()");
-//				JenkinsAndroidActivity.super.loadUrl("javascript:homeClickEvent()");
 			}
 		});
         
         refresh.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
-     		   Context context = getApplicationContext();
-     		   Toast.makeText(context, "Refresh! ", Toast.LENGTH_SHORT).show();
         		sendJavascript("refreshClickEvent()");
-//        		JenkinsAndroidActivity.super.cancelLoadUrl();
-//        		JenkinsAndroidActivity.super.sendJavascript();
-//        		this.ctx.sendJavascript("");
-//        		JenkinsAndroidActivity.super.loadUrl("javascript:refreshClickEvent()");
         	}
         } );
         
         settings.setOnClickListener(new View.OnClickListener() {
     	   public void onClick(View v) {
-    		   Context context = getApplicationContext();
-    		   Toast.makeText(context, "Settings! ", Toast.LENGTH_SHORT).show();
      		   title.setText("Settings");
      		   rowDefault.setVisibility(View.GONE);
      		   rowSettings.setVisibility(View.VISIBLE);
-//    		   loadUrl("http://www.google.com.my");
-    		   //JenkinsAndroidActivity.super.cancelLoadUrl();
-//    		   sendJavascript("document.getElementsByTagName('div')[0].style.backgroundColor='red';");
     		   sendJavascript("settingClickEvent()");
-//    		   JenkinsAndroidActivity.super.loadUrl("javascript:alert('No JavaScript')");
-//    		   JenkinsAndroidActivity.super.loadUrl("javascript:settingClickEvent()");
     	   }
       	} );
         
         backButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				Context context = getApplicationContext();
-				Toast.makeText(context, "Back! ", Toast.LENGTH_SHORT).show();
 				title.setText("Servers");
 				rowDefault.setVisibility(View.VISIBLE);
 				rowSettings.setVisibility(View.GONE);
@@ -98,18 +78,13 @@ public class JenkinsAndroidActivity extends DroidGap {
         
         addButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				Context context = getApplicationContext();
-				Toast.makeText(context, "New! ", Toast.LENGTH_SHORT).show();
 				sendJavascript("addClickEvent()");
 			}
 		});
         
         quit.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
-     		   Context context = getApplicationContext();
-     		   Toast.makeText(context, "Quit! ", Toast.LENGTH_SHORT).show();
         		sendJavascript("quitClickEvent()");
-//        		JenkinsAndroidActivity.super.loadUrl("javascript:quitClickEvent()");
         	}
         } );
     }
