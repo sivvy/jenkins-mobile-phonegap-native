@@ -1,4 +1,4 @@
-package com.jenkins.android;
+package com.jenkins.pnative;
 
 import android.os.Bundle;
 import android.view.View;
