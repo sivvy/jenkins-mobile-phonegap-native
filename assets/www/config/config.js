@@ -24,7 +24,7 @@ var jenkins = {};
 			"title": "Lobster",
 			"url" : "http://lobster.lcalink.com:8080/rssLatest",
 			"visible":true
-		},/*
+		},
 		"error" : {
 			"title": "error",
 			"url" : "http://lcalink.dyndns.org/jenkins-cot/job/LUCIA_BI_dashboards/rssAll1111111111111111111111111111111",
@@ -39,7 +39,17 @@ var jenkins = {};
 			"title": "Kaoru",
 			"url" : "http://kaoru.lcalink.com:8080/rssLatest",
 			"visible":true
-		}*/
+		},
+        "Emiko1" : {
+            "title": "Emiko1",
+            "url" : "http://emiko.lcalink.com:8080/rssLatest",
+            "visible":true
+        },
+        "Kaoru1" : {
+            "title": "Kaoru1",
+            "url" : "http://kaoru.lcalink.com:8080/rssLatest",
+            "visible":true
+        }
 	};
         
         Config = function(){

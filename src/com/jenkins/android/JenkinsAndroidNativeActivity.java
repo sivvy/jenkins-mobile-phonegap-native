@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.jenkins.*;
 import com.phonegap.*;
 
-public class JenkinsAndroidActivity extends DroidGap {
+public class JenkinsAndroidNativeActivity extends DroidGap {
     /** Called when the activity is first created. */
 	WebView myWebView;
 	TextView title;

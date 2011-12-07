@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/icon_refresh_inactive"/>
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/icon_refresh_inactive"/>
+    <item android:state_focused="false" android:state_pressed="false" android:drawable="@drawable/icon_refresh_active"/>
+</selector>
